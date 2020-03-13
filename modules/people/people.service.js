@@ -6,12 +6,14 @@ const store = require('../../store')
 
 const people = new Queue()
 store.people.forEach(person => people.enqueue(person))
-
+//console.log(people);
 // --------------------
 
 module.exports = {
   get() {
     // Return all people in the queue.
+
+
   },
 
   enqueue(person) {
