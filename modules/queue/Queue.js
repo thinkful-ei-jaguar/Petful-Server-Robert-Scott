@@ -1,7 +1,7 @@
 class _NodeQueue {
   constructor(value) {
-      this.value = value;
-      this.next = null;
+    this.value = value;
+    this.next = null;
   } 
 }
 class Queue {
@@ -13,29 +13,29 @@ class Queue {
 
   enqueue(data) {
     // Add some data to the queue.
-    const newNode = new _NodeQueue(data)
+    const newNode = new _NodeQueue(data);
     if(this.first === null) {
-        this.first = newNode;
+      this.first = newNode;
     }
     if(this.last) {
-        this.last.next = newNode;
+      this.last.next = newNode;
     }
 
-    this.last = newNode
+    this.last = newNode;
     
   }
 
   dequeue() {
     // Remove some data from the queue.
-  if (this.first === null) {
-    return;
-  }
-  const node = this.first;
-  this.first = this.first.next;
-  if (node === this.last) {
-    this.last = null;
-  }
-  return node.value
+    if (this.first === null) {
+      return;
+    }
+    const node = this.first;
+    this.first = this.first.next; //this moves the head down the list
+    if (node === this.last) {
+      this.last = null;
+    }
+    return node.value;
   }
 
   show() {
@@ -45,12 +45,13 @@ class Queue {
 
   all() {
     // Return all items in the queue.
-    const temp =this.head;
+    let temp =this.first;
     const arr =[];
     while(temp){
       temp=temp.next;
-      arr.push(temp.value)
+      arr.push(temp.value);
     }
+    return arr;
   }
 }
 

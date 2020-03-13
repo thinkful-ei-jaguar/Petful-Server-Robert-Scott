@@ -9,15 +9,19 @@ const pets = {
   dogs: new Queue()
 };
 
+//for each item in cats in store(db), get back one
 store.cats.forEach(cat => pets.cats.enqueue(cat));
+
+//for each item in dogs in store(db), get back one
 store.dogs.forEach(dog => pets.dogs.enqueue(dog));
+
 
 //console.log(pets.cats)
 //console.log(pets.dogs)
 // --------------------
 
 module.exports = {
-  get() {
+  catAndDogGet() {
     // Return the pets next in line to be adopted.
     const cat=pets.cats.show();
     const dog=pets.dogs.show();
@@ -26,5 +30,11 @@ module.exports = {
 
   dequeue(type) {
     // Remove a pet from the queue.
+    if(type === cat) {
+      pets.cats.dequeue();
+    }
+    else {
+      pets.dogs.dequeue();
+    }
   }
 };
