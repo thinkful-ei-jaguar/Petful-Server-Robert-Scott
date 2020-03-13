@@ -11,6 +11,12 @@ router.get('/', json, (req, res) => {
   
   return res.json(Pets.catAndDogGet());
 });
+router.get('/alldogs',json,(req,res)=>{
+  return res.json(Pets.getAllDogs()) ;
+})
+router.get('/allcats',json,(req,res)=>{
+  return res.json(Pets.getAllCats()) ;
+})
 router.get('/cat',(req,res)=>{
   const cat =Pets.catAndDogGet()[0];
   return res.json(cat);

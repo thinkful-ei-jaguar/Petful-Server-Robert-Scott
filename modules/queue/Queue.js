@@ -45,11 +45,13 @@ class Queue {
 
   all() {
     // Return all items in the queue.
-    let temp =this.first;
-    const arr =[];
-    while(temp){
+    let temp =this.first.next;
+    let arr =[];
+    while(temp!==null){
       temp=temp.next;
+      if(temp){
       arr.push(temp.value);
+      }
     }
     return arr;
   }
