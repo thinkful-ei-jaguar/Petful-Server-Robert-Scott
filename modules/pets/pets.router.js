@@ -21,7 +21,9 @@ router.get('/dog',(req,res)=>{
 router.delete('/', json, (req, res) => {
   // Remove a pet from adoption.
   const { type } = req.body;
-  return res.json(Pets.dequeue(type));
+  return res
+  .status(204)
+  .json(Pets.dequeue(type));
 });
 
 module.exports = router;
