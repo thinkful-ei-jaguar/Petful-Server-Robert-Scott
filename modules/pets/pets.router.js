@@ -11,7 +11,13 @@ router.get('/', json, (req, res) => {
   
   return res.json(Pets.catAndDogGet());
 });
-
+router.get('/cat',(req,res)=>{
+  const cat =Pets.catAndDogGet()[0];
+  return res.json(cat);
+})
+router.get('/dog',(req,res)=>{
+  return res.json(Pets.catAndDogGet()[1]);
+})
 router.delete('/', json, (req, res) => {
   // Remove a pet from adoption.
   const { type } = req.body;
