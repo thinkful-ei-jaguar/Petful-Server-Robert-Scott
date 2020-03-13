@@ -2,6 +2,7 @@ class _NodeQueue {
   constructor(value) {
     this.value = value;
     this.next = null;
+    this.previous=null;
   } 
 }
 class Queue {
@@ -18,11 +19,10 @@ class Queue {
       this.first = newNode;
     }
     if(this.last) {
+      newNode.previous=this.last;
       this.last.next = newNode;
     }
-
     this.last = newNode;
-    
   }
 
   dequeue() {
@@ -32,6 +32,7 @@ class Queue {
     }
     const node = this.first;
     this.first = this.first.next; //this moves the head down the list
+    //this.first.before=null;
     if (node === this.last) {
       this.last = null;
     }
@@ -49,6 +50,32 @@ class Queue {
     let arr =[];
     while(temp!==null){
       temp=temp.next;
+      if(temp){
+      arr.push(temp.value);
+      }
+    }
+    return arr;
+  }
+  allt() {
+    // Return all items in the queue.
+    let temp =this.first;
+    let arr =[];
+    arr.push(temp.value);
+    while(temp!==null){
+      temp=temp.next;
+      if(temp){
+      arr.push(temp.value);
+      }
+    }
+    return arr;
+  }
+  allp() {
+    // Return all items in the queue.
+    let temp =this.last;
+    let arr =[];
+    arr.push(temp.value);
+    while(temp!==null){
+      temp=temp.previous;
       if(temp){
       arr.push(temp.value);
       }

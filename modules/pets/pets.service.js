@@ -38,12 +38,10 @@ module.exports = {
     }
   },
   getAllDogs(){
-    arr=[];
     arr2=pets.dogs.all();
     return arr2
   },
   getAllCats(){
-    arr=[];
     arr2=pets.cats.all();
     return arr2
   }
