@@ -38,11 +38,11 @@ module.exports = {
     }
   },
   getAllDogs(){
-    arr2=pets.dogs.all();
+    let arr2=pets.dogs.all();
     return arr2
   },
   getAllCats(){
-    arr2=pets.cats.all();
+    let arr2=pets.cats.all();
     return arr2
   }
 };
