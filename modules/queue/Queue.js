@@ -50,7 +50,7 @@ class Queue {
     while(temp!==null){
       temp=temp.next;
       if(temp){
-      arr.push(temp.value);
+        arr.push(temp.value);
       }
     }
     return arr;
@@ -63,7 +63,7 @@ class Queue {
     while(temp!==null){
       temp=temp.next;
       if(temp){
-      arr.push(temp.value);
+        arr.push(temp.value);
       }
     }
     return arr;
@@ -75,7 +75,7 @@ class Queue {
     arr.push(temp.value);
     while(temp!==null){
       if(temp.value!==null){
-      arr.push(temp.value);
+        arr.push(temp.value);
       }
     }
     return arr;
