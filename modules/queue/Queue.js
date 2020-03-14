@@ -2,7 +2,7 @@ class _NodeQueue {
   constructor(value) {
     this.value = value;
     this.next = null;
-    this.previous=null;
+
   } 
 }
 class Queue {
@@ -19,7 +19,6 @@ class Queue {
       this.first = newNode;
     }
     if(this.last) {
-      newNode.previous=this.last;
       this.last.next = newNode;
     }
     this.last = newNode;
@@ -75,8 +74,7 @@ class Queue {
     let arr =[];
     arr.push(temp.value);
     while(temp!==null){
-      temp=temp.previous;
-      if(temp){
+      if(temp.value!==null){
       arr.push(temp.value);
       }
     }
