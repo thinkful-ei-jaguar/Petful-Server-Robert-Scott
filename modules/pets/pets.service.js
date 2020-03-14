@@ -39,10 +39,10 @@ module.exports = {
   },
   getAllDogs(){
     let arr2=pets.dogs.all();
-    return arr2
+    return arr2;
   },
   getAllCats(){
     let arr2=pets.cats.all();
-    return arr2
+    return arr2;
   }
 };

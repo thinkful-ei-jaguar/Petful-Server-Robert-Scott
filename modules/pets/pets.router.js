@@ -13,23 +13,23 @@ router.get('/', json, (req, res) => {
 });
 router.get('/alldogs',json,(req,res)=>{
   return res.json(Pets.getAllDogs()) ;
-})
+});
 router.get('/allcats',json,(req,res)=>{
   return res.json(Pets.getAllCats()) ;
-})
+});
 router.get('/cat',(req,res)=>{
   const cat =Pets.catAndDogGet()[0];
   return res.json(cat);
-})
+});
 router.get('/dog',(req,res)=>{
   return res.json(Pets.catAndDogGet()[1]);
-})
+});
 router.delete('/', json, (req, res) => {
   // Remove a pet from adoption.
   const { type } = req.body;
   return res
-  .status(204)
-  .json(Pets.dequeue(type));
+    .status(204)
+    .json(Pets.dequeue(type));
 });
 
 module.exports = router;
