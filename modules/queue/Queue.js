@@ -54,9 +54,11 @@ class Queue {
       }
     }
     return arr;
+  
   }
   allt() {
     // Return all items in the queue.
+    if(this.first){
     let temp =this.first;
     let arr =[];
     arr.push(temp.value);
@@ -67,6 +69,9 @@ class Queue {
       }
     }
     return arr;
+  }else{
+    return [];
+  }
   }
   allp() {
     // Return all items in the queue.
