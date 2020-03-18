@@ -42,7 +42,6 @@ class Queue {
     // Return the next item in the queue.
     return this.first.value;
   }
-
   all() {
     // Return all items in the queue.
     let temp =this.first.next;
@@ -71,6 +70,21 @@ class Queue {
     }else{
       return [];
     }
+<<<<<<< HEAD
+=======
+  }
+  allp() {
+    // Return all items in the queue.
+    let temp =this.last;
+    let arr =[];
+    arr.push(temp.value);
+    while(temp!==null){
+      if(temp.value!==null){
+        arr.push(temp.value);
+      }
+    }
+    return arr;
+>>>>>>> 63694abd79bc8dbf9eed16655bbc4e372da5c162
   }
 }
 
