@@ -1,4 +1,4 @@
-# Petful-client
+# Petful-server
 
 ## Live Link 
 https://petful.ralexblue.now.sh

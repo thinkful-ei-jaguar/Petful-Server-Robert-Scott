@@ -54,36 +54,23 @@ class Queue {
       }
     }
     return arr;
-  
   }
   allt() {
     // Return all items in the queue.
     if(this.first){
-    let temp =this.first;
-    let arr =[];
-    arr.push(temp.value);
-    while(temp!==null){
-      temp=temp.next;
-      if(temp){
-        arr.push(temp.value);
+      let temp =this.first;
+      let arr =[];
+      arr.push(temp.value);
+      while(temp!==null){
+        temp=temp.next;
+        if(temp){
+          arr.push(temp.value);
+        }
       }
+      return arr;
+    }else{
+      return [];
     }
-    return arr;
-  }else{
-    return [];
-  }
-  }
-  allp() {
-    // Return all items in the queue.
-    let temp =this.last;
-    let arr =[];
-    arr.push(temp.value);
-    while(temp!==null){
-      if(temp.value!==null){
-        arr.push(temp.value);
-      }
-    }
-    return arr;
   }
 }
 
