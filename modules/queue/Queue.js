@@ -42,6 +42,7 @@ class Queue {
     // Return the next item in the queue.
     return this.first.value;
   }
+  
   all() {
     // Return all items in the queue.
     let temp =this.first.next;
