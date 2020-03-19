@@ -25,7 +25,15 @@ module.exports = {
     // Return the pets next in line to be adopted.
     const cat=pets.cats.show();
     const dog=pets.dogs.show();
-    return [cat,dog];
+    if(cat&&dog){
+      return [cat,dog];
+    }else if(cat &&!dog){
+      return [cat];
+    }else if(!cat &&dog){
+      return [dog];
+    }else{
+      return[];
+    }
   },
 
   dequeue(type) {
